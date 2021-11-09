@@ -6,6 +6,7 @@ import { TimeProvider } from '../data/time';
 import { useRouter } from 'next/dist/client/router';
 import { useEffect } from 'react';
 import qs from 'query-string';
+import About from './about'
 
 function MyApp({ Component, pageProps }: AppProps) {
   usePosthog()
@@ -23,7 +24,8 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <TimeProvider>
       <UserContextProvider>
-        <Component {...pageProps} />
+        <About/>>
+        {/* <Component {...pageProps} /> */}
       </UserContextProvider>
     </TimeProvider>
   )
